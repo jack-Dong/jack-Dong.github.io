@@ -1,393 +1,854 @@
 <!DOCTYPE html>
-<html class="gr__people_csail_mit_edu"><head>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-<title>董师周</title>
-
-<link rel="stylesheet" href="./imgs/bootstrap.min.css">
-<style type="text/css"> 
-
-body
-{
-	font-family: 'Source Sans Pro', sans-serif;
-    background-color : #CDCDCD;
-    font-size: 19px;
-}
-    .content
-	{
-    		width : 900px;
-    		padding : 25px 30px;
-    		margin : 25px auto;
-    		background-color : #fff;
-    		box-shadow: 0px 0px 10px #999;
-    		border-radius: 15px; 
-	}	
-	table
-	{
-		padding: 5px;
-	}
-	
-	table.pub_table,td.pub_td1,td.pub_td2
-	{
-		padding: 8px;
-		width: 850px;
-        border-collapse: separate;
-        border-spacing: 15px;
-        margin-top: -5px;
-	}
-
-	td.pub_td1
-	{
-		width:50px;
-	}
-    td.pub_td1 img
-    {
-        height:120px;
-        width: 160px;
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>董师周 | 个人主页</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --bg-accent: #e8f1ec;
+      --panel: rgba(255, 252, 247, 0.86);
+      --panel-strong: #fffdf9;
+      --text: #1f2a2a;
+      --muted: #5b6766;
+      --primary: #1f6b5f;
+      --primary-deep: #123d37;
+      --line: rgba(31, 107, 95, 0.14);
+      --shadow: 0 24px 60px rgba(41, 61, 56, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max-width: 1180px;
     }
-	
-	div#container
-	{
-		margin-left: auto;
-		margin-right: auto;
-		width: 820px;
-		text-align: left;
-		position: relative;
-		background-color: #FFF;
-	}
-	div#DocInfo
-	{
-		color: #1367a7;
-		height: 158px;
-	}
-	h4,h3,h2,h1
-	{
-		color: #3B3B3B;
-	}
-	h2
-	{
-		font-size:130%;
-	}
-	p
-	{
-		color: #5B5B5B;
-		margin-bottom: 50px;
-	}
-	p.caption
-	{
-		color: #9B9B9B;
-		text-align: left;
-		width: 600px;
-	}
-	p.caption2
-	{
-		color: #9B9B9B;
-		text-align: left;
-		width: 800px;
-	}
-	#header_img
-	{
-		position: absolute;
-		top: 0px; right: 0px;
+
+    * {
+      box-sizing: border-box;
     }
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
 
-    #mit_logo {
-        position: absolute;
-        left: 646px;
-        top: 14px;
-        width: 200px;
-        height: 20px;
+    html {
+      scroll-behavior: smooth;
     }
-   
-    table.pub_table tr {
-        outline: thin dotted #666666;
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(28, 119, 104, 0.16), transparent 28%),
+        radial-gradient(circle at 85% 12%, rgba(186, 126, 65, 0.17), transparent 22%),
+        linear-gradient(180deg, #f6f1e8 0%, #f2f6f2 46%, #f7f3eb 100%);
+      line-height: 1.7;
     }
-    .papericon {
-        border-radius: 8px; 
-        -moz-box-shadow: 3px 3px 6px #888;
-        -webkit-box-shadow: 3px 3px 6px #888;
-        box-shadow: 3px 3px 6px #888;
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
     }
-</style>
 
-<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    a:hover {
+      color: var(--primary-deep);
+    }
 
-  ga('create', 'UA-23931362-2', 'mit.edu');
-  ga('send', 'pageview');
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-</script>
-<script type="text/javascript">
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-23931362-1']);
-  _gaq.push(['_trackPageview']);
+    .topbar {
+      position: sticky;
+      top: 18px;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 999px;
+      background: rgba(255, 251, 245, 0.7);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 12px 30px rgba(35, 60, 54, 0.08);
+    }
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    .brand {
+      font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
 
-    var myPix = new Array("image/profile_correct.jpg")
-    function choosePic() {
-        var randomNum = Math.floor(Math.random() * myPix.length);
-        document.getElementById("myPicture").src = myPix[randomNum];
-    };
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+      font-size: 0.95rem;
+    }
 
-</script>
-<style>#haloword-pron { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -34px; }#haloword-pron:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -34px; }#haloword-open { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -17px; }#haloword-open:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -17px; }#haloword-close { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px 0; }#haloword-close:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px 0; }#haloword-add { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -51px; }#haloword-add:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -51px; }#haloword-remove { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -68px; }#haloword-remove:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -68px; }</style></head>
+    .nav a {
+      color: var(--muted);
+    }
 
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 30px;
+      padding: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 36px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.83), rgba(250, 246, 238, 0.78)),
+        linear-gradient(135deg, rgba(31, 107, 95, 0.07), rgba(186, 126, 65, 0.08));
+      box-shadow: var(--shadow);
+    }
 
-<body data-gr-c-s-loaded="true">
-<div class="content">
-	<div id="container">
-	<table>
-		<tbody>
-		<tr>
-			<td><img id="myPicture" src="./imgs/profile_correct.jpg" style="float:left; padding-right:10px" height="200px"></td>
-			<td>
-				<div id="DocInfo">
-					<h1>董师周</h1>
-					2020年7月毕业于中国科学院大学-深圳先进技术研究院 <br>
-					硕士研究生 <br>
-					Phone:18883841206 <br>
-					Email: shizhoudong@126.com <!--<img src="./imgs/email.png" height="20px">--> <br>
-					<a href="https://scholar.google.com.hk/citations?user=frMvE9sAAAAJ&hl=zh-CN">Google Scholar</a> • <a href="https://blog.csdn.net/xiaoxiaodongshige">CSDN</a>
-				</div><br>
-			</td>
-		</tr>
-		</tbody>
-	</table>
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -36% auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(31, 107, 95, 0.14), transparent 68%);
+      pointer-events: none;
+    }
 
-	<h2>个人经历</h2>
-    <ul>
-		<li>中国科学院大学-深圳先进技术研究院计算机专业研究生，第一份工作在云从科技，工作主要涉及大语言模型微调与人类偏好对齐，大规模场景下的人脸人体时空聚类，超高客流统计相关工作。目前在长线科技工作。</li>
-		<li>研究生期间研究方向是基于深度学习的显著性检测，熟悉语义分割，显著性检测，半监督学习相关领域，并跟随深圳先进技术研究院数字所多媒体中心（Siat-MMLab）的<a href="http://mmlab.siat.ac.cn/yuqiao/">乔宇老师</a>和 <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20513/Researchers1/201707/t20170727_181385.html">王亚立老师</a> 做视频分类相关工作。</li>
-        <li>本科毕业于重庆邮电大学计算机科学与技术专业，从大二开始在陈乔松老师实验室学习图像处理相关知识。 </li>
-    </ul>
-      
-	
-    <h2>最近消息</h2>
-    <ul>
-		<li>2024-07-12: 我已从云从科技离职，并加入了长线科技（重庆）。
-		<li>2023-10-06:<a href="https://mp.weixin.qq.com/s/sSiWB38X12_mA0SEIn3eSA"> 所在项目组的模型在SuperCLUE4月测试中国内排名第六。 </a>
-		<li>2023-10-06:在知乎专栏中更新了文章： <a href="https://zhuanlan.zhihu.com/p/338274678"> LLM之我见 </a>
-		<li>2021-03-28:在知乎专栏中更新了文章： <a href="https://zhuanlan.zhihu.com/p/640882729"> 用二进制编码代替one-hot编码训练分类器 </a>
-		<li>2020-09-07:已入职<a href="https://www.cloudwalk.cn/"> 云从科技（重庆）</a>，并在入职培训中笔试成绩第一名。
-		<li>2020-06-12:将会在8.31号入职<a href="https://www.cloudwalk.cn/"> 云从科技（重庆）。</a>
-		<li>2020-06-11:在知乎专栏中更新了文章： <a href="https://zhuanlan.zhihu.com/p/72743589"> 图像分割的难点在哪里？ </a>
-    </ul>
-	<h2>项目经历</h2>
-	<ul>
-        <li>
-			<!-- <td class="pub_td1"><img src="./imgs/license_plate.png" class="papericon"></td>
-            <td class="pub_td2"> -->
-		    <b>大语言模型微调与人类偏好对齐</b><br>
-			主要负责大语言模型的指令微调，偏好对齐相关算法的探索和训练。具体包括：<br>
-			1.探索偏好对齐算法，包括DPO，ORPO，SimPO等高效实现和训练。<br>
-			2.指令微调和偏好对齐的数据构造和筛选。<br>
-			3.大语言模型的工具调用流程设计以及数据构造。<br>
-			4.模型的推理测试和错误样例分析与总结。<br>
-			5.基于streamlit开发偏好数据标注工具。<br>
-			<b>亮点:
-				<ul>
-				 	<li>参与训练的从容大语言模型在SuperCLUE，2024年2月国内排名第九，4月排名第六。[<a href="https://www.superclueai.com/">排行榜</a>] </li>
-				    <li>偏好对齐模型相对于指令微调模型在内部测试集上提升5个点以上。</li>	
-				    <li>熟悉slurm集群使用NeMo分布式训练70B+大语言模型。</li>
-				</ul> 
-			</b><br>
-			<!-- </td> -->
-		</li>
-		<hr />
-		<li>
-			<!-- <td class="pub_td1"><img src="./imgs/license_plate.png" class="papericon"></td>
-            <td class="pub_td2"> -->
-		    <b>大规模场景下的人脸人体时空聚类</b><br>
-			主要负责市级人脸聚类中和封闭场景下人脸人体的轨迹时空模型设计与实现。具体包括：<br>
-			1.市级别的基于相机GPS的时空模型设计与实现。<br>
-			2.商场，4S店等封闭场景下的行人轨迹时空设计与实现。<br>
-			3.基于Tkinter开发基于KNN的人脸人体身份标注工具。<br>
-			<b>亮点:
-				<ul> 
-					<li>有效提升低质量人脸人体的聚类效果，在聚类指标提升2个点的情况下，并减少90%以上的大乱档。</li>
-					<li>成功落地于公司的多个实际项目。</li>
-				</ul> 
-				</b><br>
-			<!-- </td> -->
-		</li>
-		<hr />
-		<li>
-			<!-- <td class="pub_td1"><img src="./imgs/license_plate.png" class="papericon"></td>
-            <td class="pub_td2"> -->
-		    <b>超高客流统计</b><br>
-			主要负责基于行人轨迹的客流统计算法的设计与实现（全自研）。具体包括：<br>
-			1.独立设计与开发基于行人轨迹的客流算法SDK。<br>
-			2.规避掉大多数情况下的徘徊人员的影响。<br>
-			3.完成店铺，街道，楼梯等场景优化与测试，泛化性强。<br>
-			4.出差去现场分析算法运行情况，并保证效果。<br>
-			<b>亮点:
-				<ul>
-				    <li>成功落地于公司的多个实际项目，在多次PK中，超过友商。</li>
-					<li>普通场景下准确率95%以上，超高客流（4000+人次/小时）下依然有92%的准确率。</li>
-				</ul>
-			</b><br>
-			<!-- </td> -->
-		</li>
-		 
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(31, 107, 95, 0.09);
+      color: var(--primary-deep);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
 
-    </ul>
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.2;
+    }
 
-	<h2>论文</h2>
-	<table class="pub_table">
-	<tbody>
-        <tr>
-           <td class="pub_td1"><img src="./imgs/holisticbmvc2018.png" class="papericon"></td>
-           <td class="pub_td2">
-			<u>Shizhou Dong</u>,Shanhui Sun,Xin Wang, Ming Li,Heye Zhang,Guang Yang,Huafeng Liu,Shuo Li<br>
-			<b>Holistic and deep feature pyramids for saliency detection.</b><br>
-			BMVC 2018<br>
-			<b>优点：性能位于行业领先水平，分割边缘准确，不需要预训练。</b><br>
-			[<a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834120_Holistic_and_Deep_Feature_Pyramids_for_Saliency_Detection/links/5ba7f04f45851574f7e19958/Holistic-and-Deep-Feature-Pyramids-for-Saliency-Detection.pdf">PDF</a>]
-			</td>
-		 </tr>
-		 
-		 <tr>
-           <td class="pub_td1"><img src="./imgs/saliencygan.png" class="papericon"></td>
-           <td class="pub_td2">
-		   
-			Chengjia Wang*, <u>Shizhou Dong*</u>, Heye Zhang<br> 
-			<b>SaliencyGAN: Deep Learning Semi-supervised Salient Object Detection</b><br>
-			IEEE Transactions on Industrial Informatics(SCI一区，IF:7.377)，小众领域，引用破百<br>
-			<b>优点：减少 70% 的需要标注的训练数据,用 3K 有标注图像训练性能就能超过弱监督算法，接近 10K 图像训练的行业领先水平全监督方法。</b><br>
-			[<a href="https://ieeexplore.ieee.org/document/8859383">PDF</a>] <br>
-			* 共同一作 <br>  
-			</td>
-		 </tr>
-		 
-		 
-		 <tr>
-           <td class="pub_td1"><img src="./imgs/video.png" class="papericon"></td>
-           <td class="pub_td2">
-			<u>Shizhou Dong</u>,Zhifan Gao,Sandeep Pirbhulal,Gui-Bin Bian,Heye Zhang, Wanqing Wu,Shuo Li<br>
-			<b>3D convolution for video salient object detection</b><br>
-			Neural Computing and Applications（IF：4.67）<br>
-			<b>优点：简单有效的运动信息建模方式。</b><br>
-			[<a href=“https://www.researchgate.net/profile/Shuo_Li4/publication/330142733_IoT-based_3D_convolution_for_video_salient_object_detection/links/5c2f846ea6fdccd6b590e2ef/IoT-based-3D-convolution-for-video-salient-object-detection.pdf">PDF</a>]
-			</td>
-		 </tr>
-		 
-		 <tr>
-           <td class="pub_td1"><img src="./imgs/minlibmvc.png" class="papericon"></td>
-           <td class="pub_td2">
-			Min Li, <u>Shizhou Dong</u>, Kun Zhang, Zhifan Gao, Xi Wu, Heye Zhang, Guang Yang, Shuo Li<br>
-			<b>Deep Learning intra-image and inter-images features for Co-saliency detection</b><br>
-			BMVC 2018<br>
-			<b>优点：通过自编码器对多张图像中相似的内容进行建模。</b><br>
-			[<a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834065_Deep_Learning_intra-image_and_inter-images_features_for_Co-saliency_detection/links/5ba7eccd92851ca9ed20350e/Deep-Learning-intra-image-and-inter-images-features-for-Co-saliency-detection.pdf">PDF</a>]
-			</td>
-		 </tr>
-		 
-		 
-		 <tr>
-           <td class="pub_td1"><img src="./imgs/mingli.png" class="papericon"></td>
-           <td class="pub_td2">
-			Ming Li, <u>Shizhou Dong</u>, Zhifan Gao, Alex Pui-wai Lee, Cheng Feng, Huahua Xiong, Wei Zheng, Dhanjoo Ghista, Heye Zhang,Victor Hug C. de Albuquerque <br>
-			<b>Unified model based on deep feature pyramid and deep supervision for multi-view echocardiographic sequences interpretation</b><br>
-			Applied Soft Computing（SCI 一区，IF：4.87）<br>
-			<b>优点：精准，鲁棒的超声心电图的自动分割。</b><br>
-			</td>
-		 </tr>
-		 
-		 
-		 <tr>
-           <td class="pub_td1"><img src="./imgs/network.png" class="papericon"></td>
-           <td class="pub_td2">
-			Zhifan Gao, Heye Zhang,<u>Shizhou Dong</u>, Shanhui Sun, Xin Wang, Guang Yang, Wanqing Wu, Shuo Li, and Victor Hugo C. de Albuquerque<br>
-			<b>Salient Object Detection in the Distributed Cloud-Edge Intelligent Network</b><br>
-			IEEE Network（SCI一区，IF：7.50）<br>
-			<b>优点：不同语义层级的分布式显著性检测框架。</b><br>
-			</td>
-		 </tr>
-	</tbody></table>
-	
-	<h2>专利</h2>
-        <ul>
-			<li>2023101033783：行人轨迹的跟踪方法、计算机设备及计算机可读存储介质，第一发明人，实审 </li>
-			<li>2022102734790：客流统计方法、系统、装置和介质，第一发明人，实审 </li>
-            <li>2019106957052：一种基于多实例学习的城市排水管道视频异常检测方法，学生第一发明人，已下证 </li>
-            <li>2019106253393：深度学习模型训练方法、装置、电子设备及存储介质，第一发明人，实审	</li>
-            <li>201911150175X：数据分类方法、装置、终端设备及可读存储介质，第一发明人，已下证</li>	
-        </ul> 
-	
-	<h2>个人竞赛</h2>
-	<table class="pub_table">
-	<tbody>
-        <tr>
-           <td class="pub_td1"><img src="./imgs/splogo.jpg" class="papericon"></td>
-           <td class="pub_td2">
-		   <b>SALICON Saliency Prediction Challenge (LSUN 2017)</b><br>
-			个人竞赛<br>
-			->https://competitions.codalab.org/competitions/17136##results<br>
-			<b>优点 <li> Leaderboard 最高排名:第二(用户名：Jack0521)</li>
-					<li> 基于图像梯度约束 Saliency Probability Map 空间平滑，性能提高 3%。</li>
-			</b>
-			<a href="./spresults.pdf">结果</a>
-			</td>
-		 </tr>
-    </tbody></table>
-	
-	<h2> 学习项目</h2>
-	<table class="pub_table">
-	<tbody>
-        <tr>
-           <td class="pub_td1"><img src="./imgs/abnomal.png" class="papericon"></td>
-           <td class="pub_td2">
-		   <b>城市排水管道视频异常检测</b><br>
-			公司合作项目<br>
-			合作公司：博铭维<br>
-			指导老师：乔宇，王亚立<br>
-			<b>优点 <li>自动区分视频中的井内井外时间段，自动找到异常区间。</li>
-					<li>自动预测异常区间的异常位置（box），类别和等级。</li>
-					<li> 设计了一套图像分类和实例分割两个任务之间相互协同学习的框架。</li>
-					<li> 设计了一个新的目标函数：Large Margin  Focal Loss 解决多标签数据不平衡的问题。<a href="./AdaptiveLargeMarginFocalLoss.pptx">算法详述</a></li>
-			</b><br>
-			</td>
-		 </tr>
-		 
-		 <tr>
-           <td class="pub_td1"><img src="./imgs/license_plate.png" class="papericon"></td>
-           <td class="pub_td2">
-		   <b>复杂环境下的车牌定位</b><br>
-			重庆绿色智能研究院实习项目<br>
-			指导老师：覃勋辉<br>
-			<b>优点：对图像划分亮暗区域，解决逆光情况下车牌难定位的问题。</b><br>
-			<a href="./license_plate.pdf">算法详述<br>
-			</a>  <a href="https://github.com/jack-Dong/muti_thread_plat_locate">Code</a>  
-			</td>
-		 </tr>
-		 
-	</tbody></table>
-	
-	
-    <h2>Others</h2>
-        <ul>
-            <li>编程: Pytorch,Transformers,Python, C， C++， SQL</li>
-            <li>获奖：云从科技：入职培训第一名。中国科学院大学：三好学生，所长奖学金。重庆邮电大学：优秀学生奖学金，优秀班干部，操作系统单科第一名。</li>
-            <li>英语：英语六级。</li>
-        </ul>    
+    .hero h1 {
+      margin-top: 18px;
+      font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+      font-size: clamp(2.4rem, 5vw, 4.8rem);
+      letter-spacing: 0.04em;
+    }
 
-</div>
-</div>
+    .hero p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
 
-<div id="haloword-lookup" class="ui-widget-content ui-draggable"><div id="haloword-title"><span id="haloword-word"></span><a herf="#" id="haloword-pron" class="haloword-button" title="&#21457;&#38899;"></a><audio id="haloword-audio"></audio><div id="haloword-control-container"><a herf="#" id="haloword-add" class="haloword-button" title="&#21152;&#20837;&#21333;&#35789;&#34920;"></a><a herf="#" id="haloword-remove" class="haloword-button" title="&#31227;&#20986;&#21333;&#35789;&#34920;"></a><a href="https://people.csail.mit.edu/bzhou/#" id="haloword-open" class="haloword-button" title="&#26597;&#30475;&#21333;&#35789;&#35814;&#32454;&#37322;&#20041;" target="_blank"></a><a herf="#" id="haloword-close" class="haloword-button" title="&#20851;&#38381;&#26597;&#35810;&#31383;"></a></div><br style="clear: both;"></div><div id="haloword-content"></div></div></body></html>
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button,
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 12px 26px rgba(31, 107, 95, 0.24);
+    }
+
+    .button:hover,
+    .link-pill:hover,
+    .card:hover,
+    .project:hover,
+    .paper:hover {
+      transform: translateY(-2px);
+    }
+
+    .link-pill {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.66);
+      color: var(--text);
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      justify-items: stretch;
+    }
+
+    .portrait-card,
+    .card,
+    .project,
+    .paper,
+    .mini-card {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .portrait-card {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .portrait-card img {
+      width: min(220px, 100%);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 20px 40px rgba(22, 42, 38, 0.16);
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      padding: 16px;
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--primary-deep);
+    }
+
+    .mini-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .section {
+      margin-top: 24px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 640px;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+      font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+    }
+
+    .two-column {
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    }
+
+    .two-column .card {
+      height: 100%;
+    }
+
+    .card {
+      padding: 28px;
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.78em;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1f6b5f, #c47a43);
+      box-shadow: 0 0 0 6px rgba(31, 107, 95, 0.08);
+    }
+
+    .news-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .news-item {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .news-date {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--primary-deep);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .project-grid,
+    .paper-grid,
+    .simple-grid,
+    .essay-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .paper-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .simple-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .essay-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project,
+    .paper,
+    .essay-card {
+      padding: 22px;
+    }
+
+    .project h3,
+    .paper h3 {
+      font-size: 1.18rem;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(31, 107, 95, 0.1);
+      color: var(--primary-deep);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .project ul,
+    .paper ul,
+    .list {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .essay-card {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .essay-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    .essay-card p {
+      margin: 0;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    .paper-top {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+
+    .paper img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(27, 44, 39, 0.16);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding: 22px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 24px;
+      background: rgba(255, 252, 247, 0.75);
+      color: var(--muted);
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 1040px) {
+      .hero,
+      .two-column,
+      .project-grid,
+      .paper-grid,
+      .simple-grid,
+      .essay-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-meta {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--max-width));
+        padding-top: 16px;
+      }
+
+      .topbar {
+        position: static;
+        border-radius: 24px;
+      }
+
+      .hero,
+      .card,
+      .project,
+      .paper,
+      .portrait-card {
+        padding: 20px;
+      }
+
+      .quick-facts {
+        grid-template-columns: 1fr;
+      }
+
+      .paper-top {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">董师周 / Shizhou Dong</div>
+      <nav class="nav">
+        <a href="#about">经历</a>
+        <a href="#zhihu-posts">随笔</a>
+        <a href="#projects">项目</a>
+        <a href="#papers">论文</a>
+        <a href="#patents">专利</a>
+        <a href="#others">其他</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">LLM · 视觉算法 · 工业落地</div>
+        <h1>董师周</h1>
+        <p>
+          2020 年毕业于中国科学院大学深圳先进技术研究院计算机专业，目前在长线科技（重庆）工作。
+          过往经历覆盖大语言模型微调与偏好对齐、人脸人体时空聚类、超高客流统计，以及显著性检测与语义分割方向的研究。
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="mailto:shizhoudong@126.com">联系我</a>
+          <a class="link-pill" href="https://scholar.google.com.hk/citations?user=frMvE9sAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a class="link-pill" href="https://blog.csdn.net/xiaoxiaodongshige" target="_blank" rel="noopener noreferrer">CSDN</a>
+        </div>
+        <div class="quick-facts">
+          <div class="mini-card">
+            <strong>6+</strong>
+            <span>论文与学术成果</span>
+          </div>
+          <div class="mini-card">
+            <strong>5</strong>
+            <span>专利申请与授权</span>
+          </div>
+          <div class="mini-card">
+            <strong>3</strong>
+            <span>核心工业项目方向</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <div class="portrait-card">
+          <img src="./imgs/profile_correct.jpg" alt="董师周照片">
+        </div>
+        <div class="card">
+          <h3>基本信息</h3>
+          <p class="muted">
+            手机：18883841206<br>
+            邮箱：<a href="mailto:shizhoudong@126.com">shizhoudong@126.com</a><br>
+            城市：重庆<br>
+            方向：LLM 微调、偏好对齐、视觉算法、时空建模
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid two-column" id="about">
+      <div class="card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">个人经历</h2>
+          </div>
+        </div>
+        <ul class="timeline">
+          <li>中国科学院大学深圳先进技术研究院计算机专业硕士，研究方向聚焦显著性检测、语义分割、半监督学习与视频理解。</li>
+          <li>研究生期间在深圳先进技术研究院数字所多媒体中心（Siat-MMLab）参与乔宇老师、王亚立老师团队的视频分类相关工作。</li>
+          <li>第一份工作在云从科技，主要负责大语言模型微调与人类偏好对齐、大规模场景下的人脸人体时空聚类、超高客流统计等方向。</li>
+          <li>本科毕业于重庆邮电大学计算机科学与技术专业，从大二开始在陈乔松老师实验室学习图像处理相关知识。</li>
+          <li>2024 年 7 月加入长线科技（重庆），延续产业级算法研发与落地工作。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">最近消息</h2>
+          </div>
+        </div>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">2024-07-12</span>
+            <div>已从云从科技离职，并加入长线科技（重庆）。</div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2023-10-06</span>
+            <div><a href="https://mp.weixin.qq.com/s/sSiWB38X12_mA0SEIn3eSA" target="_blank" rel="noopener noreferrer">所在项目组模型在 SuperCLUE 2024 年 4 月测试中排名国内第六。</a></div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2020-09-07</span>
+            <div>已入职<a href="https://www.cloudwalk.cn/" target="_blank" rel="noopener noreferrer">云从科技（重庆）</a>，并在入职培训中笔试成绩第一名。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zhihu-posts">
+      <div class="card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">随笔</h2>
+            <p>知乎专栏文章，按卡片形式展示。</p>
+          </div>
+        </div>
+        <div class="essay-grid">
+          <article class="essay-card">
+            <h3>从动作奇点到具身智能：2026年大模型演进逻辑与人形机器人终极形态</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/2016625791753015824" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/2016625791753015824</a></p>
+          </article>
+          <article class="essay-card">
+            <h3>具身智能的范式演进：VLA路线的有用性争鸣与技术实现</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/2016998151173723743" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/2016998151173723743</a></p>
+          </article>
+          <article class="essay-card">
+            <h3>数据闭环产线架构设计：支撑人工智能2.0的工业化范式</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/2018112074199377659" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/2018112074199377659</a></p>
+          </article>
+          <article class="essay-card">
+            <h3>自动驾驶世界模型的深度演进：架构、因果推理与物理人工智能的工程范式</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/2018477330725631678" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/2018477330725631678</a></p>
+          </article>
+          <article class="essay-card">
+            <h3>大模型驱动的算法工程范式转移</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/2018813300662649884" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/2018813300662649884</a></p>
+          </article>
+          <article class="essay-card">
+            <h3>LLM 之我见</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/338274678" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/338274678</a></p>
+          </article>
+          <article class="essay-card">
+            <h3>用二进制编码代替 one-hot 编码训练分类器</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/640882729" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/640882729</a></p>
+          </article>
+          <article class="essay-card">
+            <h3>图像分割的难点在哪里？</h3>
+            <p><a href="https://zhuanlan.zhihu.com/p/72743589" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/72743589</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">项目经历</h2>
+          <p>聚焦产业化算法研发，覆盖大模型训练、时空建模和高并发统计场景。</p>
+        </div>
+      </div>
+      <div class="project-grid">
+        <article class="project">
+          <h3>大语言模型微调与人类偏好对齐</h3>
+          <div class="tags">
+            <span class="tag">SFT</span>
+            <span class="tag">DPO / ORPO / SimPO</span>
+            <span class="tag">NeMo / Slurm</span>
+          </div>
+          <ul>
+            <li>负责指令微调、偏好对齐算法探索与训练实现。</li>
+            <li>完成数据构造、筛选、工具调用流程设计以及错误样例分析。</li>
+            <li>基于 Streamlit 开发偏好数据标注工具。</li>
+            <li>参与训练的从容大语言模型在 SuperCLUE 2024 年 2 月排名国内第九，4 月升至第六。</li>
+            <li>偏好对齐模型相对指令微调模型在内部测试集提升 5 个点以上。</li>
+            <li>熟悉使用 Slurm 集群和 NeMo 分布式训练 70B+ 大语言模型。</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h3>大规模场景下的人脸人体时空聚类</h3>
+          <div class="tags">
+            <span class="tag">时空模型</span>
+            <span class="tag">轨迹建模</span>
+            <span class="tag">标注工具</span>
+          </div>
+          <ul>
+            <li>负责市级人脸聚类和封闭场景下人脸人体轨迹时空模型设计与实现。</li>
+            <li>完成基于相机 GPS 的市级时空模型设计，以及商场、4S 店等封闭场景轨迹建模。</li>
+            <li>基于 Tkinter 开发 KNN 人脸人体身份标注工具。</li>
+            <li>在聚类指标提升 2 个点的同时，减少 90% 以上的大乱档问题。</li>
+            <li>方案成功落地于公司的多个实际项目。</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h3>超高客流统计</h3>
+          <div class="tags">
+            <span class="tag">轨迹算法</span>
+            <span class="tag">SDK</span>
+            <span class="tag">落地交付</span>
+          </div>
+          <ul>
+            <li>独立设计并开发基于行人轨迹的客流统计算法 SDK。</li>
+            <li>针对徘徊人员干扰进行规避，完成店铺、街道、楼梯等场景优化。</li>
+            <li>出差现场分析算法运行情况并保障效果闭环。</li>
+            <li>方案在多次项目 PK 中超过友商并成功落地。</li>
+            <li>普通场景准确率 95% 以上，超高客流场景（4000+ 人次/小时）仍达 92%。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="papers">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">论文</h2>
+          <p>研究方向集中在显著性检测、视频理解、共显著性建模与医学影像分割。</p>
+        </div>
+      </div>
+      <div class="paper-grid">
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/holisticbmvc2018.png" alt="Holistic and deep feature pyramids for saliency detection">
+            <div>
+              <h3>Holistic and Deep Feature Pyramids for Saliency Detection</h3>
+              <div class="muted"><u>Shizhou Dong</u>, Shanhui Sun, Xin Wang, Ming Li, Heye Zhang, Guang Yang, Huafeng Liu, Shuo Li</div>
+              <div class="muted">BMVC 2018</div>
+            </div>
+          </div>
+          <p class="muted">性能位于行业领先水平，分割边缘准确，不需要预训练。</p>
+          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834120_Holistic_and_Deep_Feature_Pyramids_for_Saliency_Detection/links/5ba7f04f45851574f7e19958/Holistic-and-Deep-Feature-Pyramids-for-Saliency-Detection.pdf" target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/saliencygan.png" alt="SaliencyGAN">
+            <div>
+              <h3>SaliencyGAN: Deep Learning Semi-supervised Salient Object Detection</h3>
+              <div class="muted">Chengjia Wang*, <u>Shizhou Dong*</u>, Heye Zhang</div>
+              <div class="muted">IEEE Transactions on Industrial Informatics</div>
+            </div>
+          </div>
+          <p class="muted">减少 70% 标注数据，3K 标注图像训练即可逼近 10K 全监督方法水平。* 共同一作。</p>
+          <a href="https://ieeexplore.ieee.org/document/8859383" target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/video.png" alt="3D convolution for video salient object detection">
+            <div>
+              <h3>3D Convolution for Video Salient Object Detection</h3>
+              <div class="muted"><u>Shizhou Dong</u>, Zhifan Gao, Sandeep Pirbhulal, Gui-Bin Bian, Heye Zhang, Wanqing Wu, Shuo Li</div>
+              <div class="muted">Neural Computing and Applications</div>
+            </div>
+          </div>
+          <p class="muted">一种简单有效的运动信息建模方式。</p>
+          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/330142733_IoT-based_3D_convolution_for_video_salient_object_detection/links/5c2f846ea6fdccd6b590e2ef/IoT-based-3D-convolution-for-video-salient-object-detection.pdf" target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/minlibmvc.png" alt="Co-saliency detection">
+            <div>
+              <h3>Deep Learning Intra-image and Inter-images Features for Co-saliency Detection</h3>
+              <div class="muted">Min Li, <u>Shizhou Dong</u>, Kun Zhang, Zhifan Gao, Xi Wu, Heye Zhang, Guang Yang, Shuo Li</div>
+              <div class="muted">BMVC 2018</div>
+            </div>
+          </div>
+          <p class="muted">通过自编码器对多张图像中的相似内容进行联合建模。</p>
+          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834065_Deep_Learning_intra-image_and_inter-images_features_for_Co-saliency_detection/links/5ba7eccd92851ca9ed20350e/Deep-Learning-intra-image_and_inter-images_features_for-Co-saliency_detection.pdf" target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/mingli.png" alt="multi-view echocardiographic sequences interpretation">
+            <div>
+              <h3>Unified Model Based on Deep Feature Pyramid and Deep Supervision for Multi-view Echocardiographic Sequences Interpretation</h3>
+              <div class="muted">Ming Li, <u>Shizhou Dong</u>, Zhifan Gao, Alex Pui-wai Lee, Cheng Feng, Huahua Xiong, Wei Zheng, Dhanjoo Ghista, Heye Zhang, Victor Hug C. de Albuquerque</div>
+              <div class="muted">Applied Soft Computing</div>
+            </div>
+          </div>
+          <p class="muted">面向超声心电图序列的精准、鲁棒自动分割方案。</p>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/network.png" alt="Distributed Cloud-Edge Intelligent Network">
+            <div>
+              <h3>Salient Object Detection in the Distributed Cloud-Edge Intelligent Network</h3>
+              <div class="muted">Zhifan Gao, Heye Zhang, <u>Shizhou Dong</u>, Shanhui Sun, Xin Wang, Guang Yang, Wanqing Wu, Shuo Li, Victor Hugo C. de Albuquerque</div>
+              <div class="muted">IEEE Network</div>
+            </div>
+          </div>
+          <p class="muted">从不同语义层级出发构建分布式显著性检测框架。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section grid simple-grid" id="patents">
+      <div class="card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">专利</h2>
+          </div>
+        </div>
+        <ul class="list">
+          <li>2023101033783：行人轨迹的跟踪方法、计算机设备及计算机可读存储介质，第一发明人，实审。</li>
+          <li>2022102734790：客流统计方法、系统、装置和介质，第一发明人，实审。</li>
+          <li>2019106957052：一种基于多实例学习的城市排水管道视频异常检测方法，学生第一发明人，已下证。</li>
+          <li>2019106253393：深度学习模型训练方法、装置、电子设备及存储介质，第一发明人，实审。</li>
+          <li>201911150175X：数据分类方法、装置、终端设备及可读存储介质，第一发明人，已下证。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">竞赛与学习项目</h2>
+          </div>
+        </div>
+        <ul class="list">
+          <li>
+            <strong>SALICON Saliency Prediction Challenge (LSUN 2017)</strong><br>
+            Leaderboard 最高排名第二（用户名：Jack0521），并通过图像梯度约束提升 Saliency Probability Map 空间平滑性。
+            <a href="./spresults.pdf">结果</a>
+          </li>
+          <li>
+            <strong>城市排水管道视频异常检测</strong><br>
+            公司合作项目，设计图像分类与实例分割协同学习框架，并提出 Large Margin Focal Loss 处理多标签数据不平衡问题。
+            <a href="./AdaptiveLargeMarginFocalLoss.pptx">算法详述</a>
+          </li>
+          <li>
+            <strong>复杂环境下的车牌定位</strong><br>
+            实习项目，通过亮暗区域划分解决逆光情况下车牌难定位问题。
+            <a href="./license_plate.pdf">算法详述</a> /
+            <a href="https://github.com/jack-Dong/muti_thread_plat_locate" target="_blank" rel="noopener noreferrer">Code</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="others">
+      <div class="card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">其他信息</h2>
+          </div>
+        </div>
+        <div class="simple-grid">
+          <div>
+            <h3>技能</h3>
+            <p class="muted">Pytorch、Transformers、Python、C、C++、SQL</p>
+          </div>
+          <div>
+            <h3>荣誉</h3>
+            <p class="muted">云从科技入职培训第一名，中国科学院大学三好学生与所长奖学金，重庆邮电大学优秀学生奖学金、优秀班干部、操作系统单科第一名。</p>
+          </div>
+          <div>
+            <h3>英语</h3>
+            <p class="muted">英语六级。</p>
+          </div>
+          <div>
+            <h3>方向关键词</h3>
+            <p class="muted">显著性检测、语义分割、半监督学习、时空聚类、大模型对齐。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
