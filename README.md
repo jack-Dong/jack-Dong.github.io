@@ -12,7 +12,7 @@
 
 - 个人经历
 - 最近消息（非文章动态）
-- 随笔（知乎文章卡片）
+- 随笔（当前 11 篇知乎文章卡片）
 - 项目经历
 - 论文
 - 专利与竞赛
@@ -25,7 +25,17 @@
 
 - 更新“最近消息”：编辑 `index.html` 中 `section#about` 下的“最近消息”卡片。
 - 更新“随笔”：编辑 `index.html` 中 `section#zhihu-posts` 下的 `essay-card` 列表。
-- 新增随笔建议格式：`标题 + 文章链接`（避免只放裸链接）。
+- 新增随笔建议格式：`来源标识 + 标题 + 摘要 + 阅读全文链接`。
+- 文章顺序和链接以 <https://www.zhihu.com/people/dongshizhou/posts> 为准。
+
+## 验证
+
+```bash
+node --test tests/homepage.test.js
+node --check script.js
+```
+
+静态测试会检查知乎文章数量、标题链接映射、知乎主页入口和毛玻璃关键样式。
 
 ## 部署
 
