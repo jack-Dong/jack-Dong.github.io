@@ -6,6 +6,7 @@ const test = require('node:test');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'style.css'), 'utf8');
+const script = fs.readFileSync(path.join(root, 'script.js'), 'utf8');
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -49,4 +50,63 @@ test('defines glass surfaces with responsive and accessibility fallbacks', () =>
   assert.match(css, /@supports\s+not\s+\(\s*backdrop-filter:/);
   assert.match(css, /@media\s+\(prefers-reduced-motion:\s*reduce\)/);
   assert.match(css, /:focus-visible/);
+});
+
+test('renders three complete project case studies', () => {
+  const projectCases = html.match(/<article class="project-case"/g) || [];
+  assert.equal(projectCases.length, 3);
+
+  const projectsSection = html.slice(
+    html.indexOf('<section class="section project-section" id="projects">'),
+    html.indexOf('<section class="section grid two-column" id="about">'),
+  );
+
+  for (const label of ['挑战', '职责', '方法', '结果']) {
+    const matches = projectsSection.match(new RegExp(`<b>${label}</b>`, 'g')) || [];
+    assert.equal(matches.length, 3, `expected every project to include ${label}`);
+  }
+});
+
+test('puts projects before experience, papers, and writing', () => {
+  const projectsIndex = html.indexOf('id="projects"');
+  const aboutIndex = html.indexOf('id="about"');
+  const papersIndex = html.indexOf('id="papers"');
+  const writingIndex = html.indexOf('id="zhihu-posts"');
+
+  assert.ok(projectsIndex > -1);
+  assert.ok(projectsIndex < aboutIndex);
+  assert.ok(aboutIndex < papersIndex);
+  assert.ok(papersIndex < writingIndex);
+});
+
+test('links the hero to projects and defines responsive case layouts', () => {
+  assert.match(html, /class="button"\s+href="#projects"/);
+  assert.match(css, /\.project-case\s*\{/);
+  assert.match(css, /\.case-story\s*\{/);
+  assert.match(css, /@media\s+\(max-width:\s*760px\)[\s\S]*\.project-case/);
+});
+
+test('defines ambient and layered entrance motion', () => {
+  assert.doesNotMatch(css, /@keyframes\s+ambient-drift/);
+  assert.match(css, /body::after\s*\{[^}]*transition:[^;}]*transform/);
+  assert.match(css, /\.page-ready\s+body::after\s*\{[^}]*transform:/);
+  assert.doesNotMatch(css, /animation:\s*hero-rise/);
+  assert.match(css, /\.js\s+\.hero\s+\.eyebrow,[\s\S]*?\{[^}]*transition:[^;}]*transform/);
+  assert.match(css, /\.js\.page-ready\s+\.hero\s+\.eyebrow,[\s\S]*?\{[^}]*transform:\s*none/);
+});
+
+test('progressively reveals projects and their internal content', () => {
+  assert.match(html, /document\.documentElement\.classList\.add\('js'\)/);
+  assert.match(css, /\.js\s+\.animate-on-scroll/);
+  assert.match(css, /\.project-case\.visible\s+\.outcome/);
+  assert.match(css, /\.project-case\.visible\s+\.story-cell/);
+  assert.match(script, /--reveal-order/);
+  assert.match(script, /--item-order/);
+});
+
+test('disables decorative motion for reduced-motion users', () => {
+  const reducedMotion = css.slice(css.indexOf('@media (prefers-reduced-motion: reduce)'));
+  assert.match(reducedMotion, /body::after/);
+  assert.match(reducedMotion, /animation:\s*none\s*!important/);
+  assert.match(reducedMotion, /transition-delay:\s*0ms\s*!important/);
 });

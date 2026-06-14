@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="董师周的个人主页，记录大语言模型、视觉算法、具身智能研究与工业项目实践。">
   <title>董师周 | 个人主页</title>
-  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="style.css?v=20260614-motion5">
 </head>
 
 <body>
@@ -14,10 +15,10 @@
     <header class="topbar">
       <div class="brand">董师周 / Shizhou Dong</div>
       <nav class="nav">
-        <a href="#about">经历</a>
-        <a href="#zhihu-posts">随笔</a>
         <a href="#projects">项目</a>
+        <a href="#about">经历</a>
         <a href="#papers">论文</a>
+        <a href="#zhihu-posts">随笔</a>
         <a href="#patents">专利</a>
         <a href="#others">其他</a>
       </nav>
@@ -25,17 +26,17 @@
 
     <section class="hero">
       <div>
-        <div class="eyebrow">LLM · 视觉算法 · 工业落地</div>
+        <div class="eyebrow">算法工程师 · 研究者 · 产业实践</div>
         <h1>董师周</h1>
         <p>
-          2020 年毕业于中国科学院大学深圳先进技术研究院计算机专业，目前在长线科技（重庆）工作。
-          过往经历覆盖大语言模型微调与偏好对齐、人脸人体时空聚类、超高客流统计，以及显著性检测与语义分割方向的研究。
+          聚焦大语言模型训练与偏好对齐、视觉时空建模和产业级算法系统，
+          从研究探索、工程实现到现场交付，把复杂算法做成可验证的业务结果。
         </p>
         <div class="hero-actions">
-          <a class="button" href="mailto:shizhoudong@126.com">联系我</a>
+          <a class="button" href="#projects">查看项目经历</a>
+          <a class="link-pill" href="mailto:shizhoudong@126.com">联系我</a>
           <a class="link-pill" href="https://scholar.google.com.hk/citations?user=frMvE9sAAAAJ&hl=zh-CN" target="_blank"
             rel="noopener noreferrer">Google Scholar</a>
-
         </div>
         <div class="quick-facts">
           <div class="mini-card">
@@ -66,6 +67,96 @@
             方向：LLM 微调、偏好对齐、视觉算法、时空建模
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="section project-section" id="projects">
+      <div class="project-intro">
+        <div>
+          <span class="section-index">01 / SELECTED WORK</span>
+          <h2 class="section-title">项目经历</h2>
+          <p>从研究探索、工程实现到现场交付，把复杂算法转化为可验证的业务结果。</p>
+        </div>
+        <p class="project-intro-note">
+          三个项目覆盖大语言模型训练、时空建模与高密度视觉统计，均按挑战、职责、方法和结果完整展开。
+        </p>
+      </div>
+
+      <div class="project-list">
+        <article class="project-case">
+          <div class="case-lead">
+            <span class="case-number">CASE 01 · LARGE LANGUAGE MODEL</span>
+            <h3>大语言模型微调与人类偏好对齐</h3>
+            <p>面向通用大模型能力提升，建立从偏好数据构造到训练评测的完整工作流。</p>
+            <div class="outcomes">
+              <div class="outcome"><strong>Top 6</strong><span>SuperCLUE 国内排名</span></div>
+              <div class="outcome"><strong>+5</strong><span>内部测试集提升</span></div>
+              <div class="outcome"><strong>70B+</strong><span>分布式训练规模</span></div>
+            </div>
+            <div class="tags">
+              <span class="tag">SFT</span>
+              <span class="tag">DPO / ORPO / SimPO</span>
+              <span class="tag">NeMo</span>
+              <span class="tag">Slurm</span>
+            </div>
+          </div>
+          <div class="case-story">
+            <div class="story-cell"><b>挑战</b><p>提升模型真实偏好表现，同时控制偏好数据噪声与训练稳定性。</p></div>
+            <div class="story-cell"><b>职责</b><p>负责训练算法探索、数据流程、工具调用设计、错误样例分析与标注工具开发。</p></div>
+            <div class="story-cell"><b>方法</b><p>实践 SFT、DPO、ORPO、SimPO，并用 Streamlit、NeMo 和 Slurm 建立训练反馈闭环。</p></div>
+            <div class="story-cell"><b>结果</b><p>模型进入 SuperCLUE 国内第六，偏好模型较指令微调基线提升 5 点以上。</p></div>
+          </div>
+        </article>
+
+        <article class="project-case">
+          <div class="case-lead">
+            <span class="case-number">CASE 02 · SPATIOTEMPORAL MODELING</span>
+            <h3>大规模场景下的人脸人体时空聚类</h3>
+            <p>从城市级相机网络到商场、4S 店等封闭空间，建立可落地的身份与轨迹建模方案。</p>
+            <div class="outcomes">
+              <div class="outcome"><strong>+2</strong><span>聚类指标提升</span></div>
+              <div class="outcome"><strong>-90%</strong><span>大乱档问题</span></div>
+              <div class="outcome"><strong>多项目</strong><span>实际落地</span></div>
+            </div>
+            <div class="tags">
+              <span class="tag">时空模型</span>
+              <span class="tag">轨迹建模</span>
+              <span class="tag">KNN</span>
+              <span class="tag">Tkinter</span>
+            </div>
+          </div>
+          <div class="case-story">
+            <div class="story-cell"><b>挑战</b><p>跨相机身份易混淆，大规模聚类会产生严重大乱档与轨迹断裂。</p></div>
+            <div class="story-cell"><b>职责</b><p>负责市级与封闭场景的时空模型设计、实现及标注辅助工具。</p></div>
+            <div class="story-cell"><b>方法</b><p>结合相机 GPS、场景拓扑与轨迹约束，并开发 KNN 人脸人体身份标注工具。</p></div>
+            <div class="story-cell"><b>结果</b><p>聚类指标提升 2 点，同时减少 90% 以上的大乱档并完成多个项目部署。</p></div>
+          </div>
+        </article>
+
+        <article class="project-case">
+          <div class="case-lead">
+            <span class="case-number">CASE 03 · COMPUTER VISION SDK</span>
+            <h3>超高客流统计</h3>
+            <p>独立设计基于行人轨迹的客流统计 SDK，覆盖店铺、街道与楼梯等复杂场景。</p>
+            <div class="outcomes">
+              <div class="outcome"><strong>95%+</strong><span>普通场景准确率</span></div>
+              <div class="outcome"><strong>92%</strong><span>超高客流准确率</span></div>
+              <div class="outcome"><strong>4000+</strong><span>人次 / 小时</span></div>
+            </div>
+            <div class="tags">
+              <span class="tag">轨迹算法</span>
+              <span class="tag">SDK</span>
+              <span class="tag">现场优化</span>
+              <span class="tag">交付闭环</span>
+            </div>
+          </div>
+          <div class="case-story">
+            <div class="story-cell"><b>挑战</b><p>高密度客流、徘徊行为和复杂通道会显著干扰进出人数判断。</p></div>
+            <div class="story-cell"><b>职责</b><p>独立完成算法与 SDK 设计开发，并承担现场效果分析、优化和交付。</p></div>
+            <div class="story-cell"><b>方法</b><p>围绕轨迹状态与区域关系规避徘徊干扰，针对不同空间定制统计策略。</p></div>
+            <div class="story-cell"><b>结果</b><p>多次项目 PK 超过友商，4000+ 人次每小时场景准确率仍达到 92%。</p></div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -110,10 +201,106 @@
       </div>
     </section>
 
+    <section class="section" id="papers">
+      <div class="section-header">
+        <div>
+          <span class="section-index">02 / RESEARCH</span>
+          <h2 class="section-title">论文</h2>
+          <p>研究方向集中在显著性检测、视频理解、共显著性建模与医学影像分割。</p>
+        </div>
+      </div>
+      <div class="paper-grid">
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/holisticbmvc2018.png" alt="Holistic and deep feature pyramids for saliency detection">
+            <div>
+              <h3>Holistic and Deep Feature Pyramids for Saliency Detection</h3>
+              <div class="muted"><u>Shizhou Dong</u>, Shanhui Sun, Xin Wang, Ming Li, Heye Zhang, Guang Yang, Huafeng
+                Liu, Shuo Li</div>
+              <div class="muted">BMVC 2018</div>
+            </div>
+          </div>
+          <p class="muted">性能位于行业领先水平，分割边缘准确，不需要预训练。</p>
+          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834120_Holistic_and_Deep_Feature_Pyramids_for_Saliency_Detection/links/5ba7f04f45851574f7e19958/Holistic-and-Deep-Feature-Pyramids-for-Saliency-Detection.pdf"
+            target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/saliencygan.png" alt="SaliencyGAN">
+            <div>
+              <h3>SaliencyGAN: Deep Learning Semi-supervised Salient Object Detection</h3>
+              <div class="muted">Chengjia Wang*, <u>Shizhou Dong*</u>, Heye Zhang</div>
+              <div class="muted">IEEE Transactions on Industrial Informatics</div>
+            </div>
+          </div>
+          <p class="muted">减少 70% 标注数据，3K 标注图像训练即可逼近 10K 全监督方法水平。* 共同一作。</p>
+          <a href="https://ieeexplore.ieee.org/document/8859383" target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/video.png" alt="3D convolution for video salient object detection">
+            <div>
+              <h3>3D Convolution for Video Salient Object Detection</h3>
+              <div class="muted"><u>Shizhou Dong</u>, Zhifan Gao, Sandeep Pirbhulal, Gui-Bin Bian, Heye Zhang, Wanqing
+                Wu, Shuo Li</div>
+              <div class="muted">Neural Computing and Applications</div>
+            </div>
+          </div>
+          <p class="muted">一种简单有效的运动信息建模方式。</p>
+          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/330142733_IoT-based_3D_convolution_for_video_salient_object_detection/links/5c2f846ea6fdccd6b590e2ef/IoT-based-3D-convolution-for-video-salient-object-detection.pdf"
+            target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/minlibmvc.png" alt="Co-saliency detection">
+            <div>
+              <h3>Deep Learning Intra-image and Inter-images Features for Co-saliency Detection</h3>
+              <div class="muted">Min Li, <u>Shizhou Dong</u>, Kun Zhang, Zhifan Gao, Xi Wu, Heye Zhang, Guang Yang, Shuo
+                Li</div>
+              <div class="muted">BMVC 2018</div>
+            </div>
+          </div>
+          <p class="muted">通过自编码器对多张图像中的相似内容进行联合建模。</p>
+          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834065_Deep_Learning_intra-image_and_inter-images_features_for_Co-saliency_detection/links/5ba7eccd92851ca9ed20350e/Deep-Learning-intra-image_and_inter-images_features_for-Co-saliency_detection.pdf"
+            target="_blank" rel="noopener noreferrer">查看 PDF</a>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/mingli.png" alt="multi-view echocardiographic sequences interpretation">
+            <div>
+              <h3>Unified Model Based on Deep Feature Pyramid and Deep Supervision for Multi-view Echocardiographic
+                Sequences Interpretation</h3>
+              <div class="muted">Ming Li, <u>Shizhou Dong</u>, Zhifan Gao, Alex Pui-wai Lee, Cheng Feng, Huahua Xiong,
+                Wei Zheng, Dhanjoo Ghista, Heye Zhang, Victor Hug C. de Albuquerque</div>
+              <div class="muted">Applied Soft Computing</div>
+            </div>
+          </div>
+          <p class="muted">面向超声心电图序列的精准、鲁棒自动分割方案。</p>
+        </article>
+
+        <article class="paper">
+          <div class="paper-top">
+            <img src="./imgs/network.png" alt="Distributed Cloud-Edge Intelligent Network">
+            <div>
+              <h3>Salient Object Detection in the Distributed Cloud-Edge Intelligent Network</h3>
+              <div class="muted">Zhifan Gao, Heye Zhang, <u>Shizhou Dong</u>, Shanhui Sun, Xin Wang, Guang Yang, Wanqing
+                Wu, Shuo Li, Victor Hugo C. de Albuquerque</div>
+              <div class="muted">IEEE Network</div>
+            </div>
+          </div>
+          <p class="muted">从不同语义层级出发构建分布式显著性检测框架。</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="zhihu-posts">
       <div class="section-header">
         <div>
-          <span class="section-index">01 / WRITING</span>
+          <span class="section-index">03 / WRITING</span>
           <h2 class="section-title">知乎随笔</h2>
           <p>围绕世界模型、具身智能、大语言模型与视觉算法的长期思考。</p>
         </div>
@@ -220,160 +407,6 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">项目经历</h2>
-          <p>聚焦产业化算法研发，覆盖大模型训练、时空建模和高并发统计场景。</p>
-        </div>
-      </div>
-      <div class="project-grid">
-        <article class="project">
-          <h3>大语言模型微调与人类偏好对齐</h3>
-          <div class="tags">
-            <span class="tag">SFT</span>
-            <span class="tag">DPO / ORPO / SimPO</span>
-            <span class="tag">NeMo / Slurm</span>
-          </div>
-          <ul>
-            <li>负责指令微调、偏好对齐算法探索与训练实现。</li>
-            <li>完成数据构造、筛选、工具调用流程设计以及错误样例分析。</li>
-            <li>基于 Streamlit 开发偏好数据标注工具。</li>
-            <li>参与训练的从容大语言模型在 SuperCLUE 2024 年 2 月排名国内第九，4 月升至第六。</li>
-            <li>偏好对齐模型相对指令微调模型在内部测试集提升 5 个点以上。</li>
-            <li>熟悉使用 Slurm 集群和 NeMo 分布式训练 70B+ 大语言模型。</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <h3>大规模场景下的人脸人体时空聚类</h3>
-          <div class="tags">
-            <span class="tag">时空模型</span>
-            <span class="tag">轨迹建模</span>
-            <span class="tag">标注工具</span>
-          </div>
-          <ul>
-            <li>负责市级人脸聚类和封闭场景下人脸人体轨迹时空模型设计与实现。</li>
-            <li>完成基于相机 GPS 的市级时空模型设计，以及商场、4S 店等封闭场景轨迹建模。</li>
-            <li>基于 Tkinter 开发 KNN 人脸人体身份标注工具。</li>
-            <li>在聚类指标提升 2 个点的同时，减少 90% 以上的大乱档问题。</li>
-            <li>方案成功落地于公司的多个实际项目。</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <h3>超高客流统计</h3>
-          <div class="tags">
-            <span class="tag">轨迹算法</span>
-            <span class="tag">SDK</span>
-            <span class="tag">落地交付</span>
-          </div>
-          <ul>
-            <li>独立设计并开发基于行人轨迹的客流统计算法 SDK。</li>
-            <li>针对徘徊人员干扰进行规避，完成店铺、街道、楼梯等场景优化。</li>
-            <li>出差现场分析算法运行情况并保障效果闭环。</li>
-            <li>方案在多次项目 PK 中超过友商并成功落地。</li>
-            <li>普通场景准确率 95% 以上，超高客流场景（4000+ 人次/小时）仍达 92%。</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="papers">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">论文</h2>
-          <p>研究方向集中在显著性检测、视频理解、共显著性建模与医学影像分割。</p>
-        </div>
-      </div>
-      <div class="paper-grid">
-        <article class="paper">
-          <div class="paper-top">
-            <img src="./imgs/holisticbmvc2018.png" alt="Holistic and deep feature pyramids for saliency detection">
-            <div>
-              <h3>Holistic and Deep Feature Pyramids for Saliency Detection</h3>
-              <div class="muted"><u>Shizhou Dong</u>, Shanhui Sun, Xin Wang, Ming Li, Heye Zhang, Guang Yang, Huafeng
-                Liu, Shuo Li</div>
-              <div class="muted">BMVC 2018</div>
-            </div>
-          </div>
-          <p class="muted">性能位于行业领先水平，分割边缘准确，不需要预训练。</p>
-          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834120_Holistic_and_Deep_Feature_Pyramids_for_Saliency_Detection/links/5ba7f04f45851574f7e19958/Holistic-and-Deep-Feature-Pyramids-for-Saliency-Detection.pdf"
-            target="_blank" rel="noopener noreferrer">查看 PDF</a>
-        </article>
-
-        <article class="paper">
-          <div class="paper-top">
-            <img src="./imgs/saliencygan.png" alt="SaliencyGAN">
-            <div>
-              <h3>SaliencyGAN: Deep Learning Semi-supervised Salient Object Detection</h3>
-              <div class="muted">Chengjia Wang*, <u>Shizhou Dong*</u>, Heye Zhang</div>
-              <div class="muted">IEEE Transactions on Industrial Informatics</div>
-            </div>
-          </div>
-          <p class="muted">减少 70% 标注数据，3K 标注图像训练即可逼近 10K 全监督方法水平。* 共同一作。</p>
-          <a href="https://ieeexplore.ieee.org/document/8859383" target="_blank" rel="noopener noreferrer">查看 PDF</a>
-        </article>
-
-        <article class="paper">
-          <div class="paper-top">
-            <img src="./imgs/video.png" alt="3D convolution for video salient object detection">
-            <div>
-              <h3>3D Convolution for Video Salient Object Detection</h3>
-              <div class="muted"><u>Shizhou Dong</u>, Zhifan Gao, Sandeep Pirbhulal, Gui-Bin Bian, Heye Zhang, Wanqing
-                Wu, Shuo Li</div>
-              <div class="muted">Neural Computing and Applications</div>
-            </div>
-          </div>
-          <p class="muted">一种简单有效的运动信息建模方式。</p>
-          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/330142733_IoT-based_3D_convolution_for_video_salient_object_detection/links/5c2f846ea6fdccd6b590e2ef/IoT-based-3D-convolution-for-video-salient-object-detection.pdf"
-            target="_blank" rel="noopener noreferrer">查看 PDF</a>
-        </article>
-
-        <article class="paper">
-          <div class="paper-top">
-            <img src="./imgs/minlibmvc.png" alt="Co-saliency detection">
-            <div>
-              <h3>Deep Learning Intra-image and Inter-images Features for Co-saliency Detection</h3>
-              <div class="muted">Min Li, <u>Shizhou Dong</u>, Kun Zhang, Zhifan Gao, Xi Wu, Heye Zhang, Guang Yang, Shuo
-                Li</div>
-              <div class="muted">BMVC 2018</div>
-            </div>
-          </div>
-          <p class="muted">通过自编码器对多张图像中的相似内容进行联合建模。</p>
-          <a href="https://www.researchgate.net/profile/Shuo_Li4/publication/327834065_Deep_Learning_intra-image_and_inter-images_features_for_Co-saliency_detection/links/5ba7eccd92851ca9ed20350e/Deep-Learning-intra-image_and_inter-images_features_for-Co-saliency_detection.pdf"
-            target="_blank" rel="noopener noreferrer">查看 PDF</a>
-        </article>
-
-        <article class="paper">
-          <div class="paper-top">
-            <img src="./imgs/mingli.png" alt="multi-view echocardiographic sequences interpretation">
-            <div>
-              <h3>Unified Model Based on Deep Feature Pyramid and Deep Supervision for Multi-view Echocardiographic
-                Sequences Interpretation</h3>
-              <div class="muted">Ming Li, <u>Shizhou Dong</u>, Zhifan Gao, Alex Pui-wai Lee, Cheng Feng, Huahua Xiong,
-                Wei Zheng, Dhanjoo Ghista, Heye Zhang, Victor Hug C. de Albuquerque</div>
-              <div class="muted">Applied Soft Computing</div>
-            </div>
-          </div>
-          <p class="muted">面向超声心电图序列的精准、鲁棒自动分割方案。</p>
-        </article>
-
-        <article class="paper">
-          <div class="paper-top">
-            <img src="./imgs/network.png" alt="Distributed Cloud-Edge Intelligent Network">
-            <div>
-              <h3>Salient Object Detection in the Distributed Cloud-Edge Intelligent Network</h3>
-              <div class="muted">Zhifan Gao, Heye Zhang, <u>Shizhou Dong</u>, Shanhui Sun, Xin Wang, Guang Yang, Wanqing
-                Wu, Shuo Li, Victor Hugo C. de Albuquerque</div>
-              <div class="muted">IEEE Network</div>
-            </div>
-          </div>
-          <p class="muted">从不同语义层级出发构建分布式显著性检测框架。</p>
-        </article>
-      </div>
-    </section>
-
     <section class="section grid simple-grid" id="patents">
       <div class="card">
         <div class="section-header">
@@ -446,7 +479,7 @@
       </div>
     </section>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260614-motion5"></script>
 </body>
 
 </html>

@@ -1,15 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.classList.add('page-ready');
+
     const animateElements = document.querySelectorAll(
-        '.hero, .portrait-card, .project, .paper, .essay-card, .news-item, .section-title'
+        '.project-intro, .project-case, #about .card, .paper, .essay-card, .news-item, .section-title'
     );
     
     animateElements.forEach(el => {
         el.classList.add('animate-on-scroll');
     });
 
-    const gridContainers = document.querySelectorAll('.project-grid, .paper-grid, .essay-grid, .simple-grid, .quick-facts, .news-list');
+    const gridContainers = document.querySelectorAll('.project-list, .paper-grid, .essay-grid, .simple-grid, .quick-facts, .news-list');
     gridContainers.forEach(container => {
         container.classList.add('grid-stagger');
+    });
+
+    document.querySelectorAll('.project-case').forEach((project, projectIndex) => {
+        project.style.setProperty('--reveal-order', projectIndex);
+
+        project.querySelectorAll('.outcome, .story-cell').forEach((item, itemIndex) => {
+            item.style.setProperty('--item-order', itemIndex);
+        });
     });
 
     if (!('IntersectionObserver' in window)) {

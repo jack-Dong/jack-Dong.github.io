@@ -10,11 +10,11 @@
 
 当前页面已拆分为：
 
+- 项目经历（首页核心，按挑战、职责、方法、结果展示）
 - 个人经历
 - 最近消息（非文章动态）
-- 随笔（当前 11 篇知乎文章卡片）
-- 项目经历
 - 论文
+- 随笔（当前 11 篇知乎文章卡片）
 - 专利与竞赛
 
 ## 本地预览
@@ -24,6 +24,7 @@
 ## 内容维护
 
 - 更新“最近消息”：编辑 `index.html` 中 `section#about` 下的“最近消息”卡片。
+- 更新“项目经历”：编辑 `index.html` 中 `section#projects` 下的 `project-case` 案例。
 - 更新“随笔”：编辑 `index.html` 中 `section#zhihu-posts` 下的 `essay-card` 列表。
 - 新增随笔建议格式：`来源标识 + 标题 + 摘要 + 阅读全文链接`。
 - 文章顺序和链接以 <https://www.zhihu.com/people/dongshizhou/posts> 为准。
