@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const phrases = [
             '大语言模型训练与偏好对齐',
             '视觉时空建模',
+            '端到端辅助驾驶与模型数据',
             '具身智能与世界模型',
             '产业级算法系统交付'
         ];
