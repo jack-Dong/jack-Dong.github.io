@@ -13,6 +13,7 @@ function escapeRegExp(value) {
 }
 
 const expectedArticles = [
+  ['是时候让你的LLM 看看你训的模型的权重了', 'https://zhuanlan.zhihu.com/p/2102745447450292934'],
   ['世界模型的N种用法', 'https://zhuanlan.zhihu.com/p/2030402224220786815'],
   ['AutoResearch自主研究范式', 'https://zhuanlan.zhihu.com/p/2026773441034864070'],
   ['大模型时代强化学习的收敛优势：从先验知识到优化曲面的深度解析', 'https://zhuanlan.zhihu.com/p/2021730272870241321'],
